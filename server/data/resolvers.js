@@ -25,6 +25,20 @@ export const Resolvers = {
         groupId,
       });
     },
+    createGroup(_, { name }) {
+      return Group.create({
+        name,
+      });
+    },
+    modifyGroup(_, { id, name }) {
+      return Group.update(
+        { name },
+        { where: { id } },
+      );
+    },
+    deleteGroup(_, { id }) {
+      return Group.destroy({ where: { id } });
+    },
   },
   Group: {
     users(group) {

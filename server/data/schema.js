@@ -42,8 +42,18 @@ export const Schema = [`
     createMessage(
       text: String!, userId: Int!, groupId: Int!
     ): Message
+    createGroup(
+      name: String!
+    ): Group
+    modifyGroup(
+      id: Int!
+      name: String!
+    ): Group
+    deleteGroup(
+      id: Int!
+    ): Group
   }
-  
+
   schema {
     query: Query
     mutation: Mutation
