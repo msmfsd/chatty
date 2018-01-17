@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest"
+    "test": "jest",
+    "postinstall": "rm ./node_modules/react-native/local-cli/core/__fixtures__/files/package.json"
   },
   "dependencies": {
     "apollo-client": "1.9.0",
@@ -16,6 +17,7 @@
     "react": "16.2.0",
     "react-apollo": "1.4.10",
     "react-native": "0.52.0",
+    "react-native-vector-icons": "^4.5.0",
     "react-navigation": "^1.0.0-beta.27",
     "react-redux": "^5.0.6",
     "redux": "^3.7.2",

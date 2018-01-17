@@ -1,4 +1,3 @@
-import { _ } from 'lodash';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import {
@@ -36,11 +35,7 @@ const styles = StyleSheet.create({
     flex: 0.7,
   },
 });
-// create fake data to populate our FlatList
-const fakeData = () => _.times(100, i => ({
-  id: i,
-  name: `Group ${i}`,
-}));
+
 class Group extends Component {
   constructor(props) {
     super(props);
